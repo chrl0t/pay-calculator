@@ -11,4 +11,8 @@ describe("takeHomePay()", () => {
     const acutalOutput1 = takeHomePay(input1);
     expect(acutalOutput1).toEqual(expectedOutput1);
   });
+  it("should return an object if a valid input is passed in", () => {
+    const output = takeHomePay(1);
+    expect(typeof output).toBe("object");
+  });
 });

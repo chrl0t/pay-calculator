@@ -1,4 +1,4 @@
-const { takeHomePay } = require("../utils/take-home-pay");
+const takeHomePay = require("../utils/take-home-pay");
 
 describe("takeHomePay()", () => {
   it("should return a warning if an invalid input is passed in", () => {

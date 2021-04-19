@@ -15,4 +15,11 @@ describe("takeHomePay()", () => {
     const output = takeHomePay(1);
     expect(typeof output).toBe("object");
   });
+  it("should return an object with the expected keys", () => {
+    const input = 1;
+    const output = takeHomePay(input);
+    expect(output).toHaveProperty("tax");
+    expect(output).toHaveProperty("ni");
+    expect(output).toHaveProperty("pay");
+  });
 });

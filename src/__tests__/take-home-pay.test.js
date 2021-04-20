@@ -22,9 +22,15 @@ describe("takeHomePay()", () => {
     expect(output).toHaveProperty("ni");
     expect(output).toHaveProperty("pay");
   });
-  it("should return the correct value if the input is less than 14,000", () => {
+  it("should return the correct value if the input is less than 15,001", () => {
     const input = 12000;
     const expectedOutput = { tax: 0, ni: 0, pay: 12000 };
+    const actualOutput = takeHomePay(input);
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+  it("should return the correct value if the input is between 15,001 50,000", () => {
+    const input = 20000;
+    const expectedOutput = { tax: 1000, ni: 600, pay: 18400 };
     const actualOutput = takeHomePay(input);
     expect(actualOutput).toEqual(expectedOutput);
   });

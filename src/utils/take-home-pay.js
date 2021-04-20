@@ -12,6 +12,13 @@ const takeHomePay = (salary) => {
       paySlip.tax = tax;
       paySlip.ni = ni;
       paySlip.pay = pay;
+    } else {
+      const tax = (50000 - 15000) * 0.2 + (salary - 50000) * 0.4;
+      const ni = (50000 - 15000) * 0.12 + (salary - 50000) * 0.02;
+      const pay = salary - tax - ni;
+      paySlip.tax = tax;
+      paySlip.ni = ni;
+      paySlip.pay = pay;
     }
   }
   return paySlip;

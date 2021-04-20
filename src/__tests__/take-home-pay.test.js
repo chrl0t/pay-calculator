@@ -28,9 +28,15 @@ describe("takeHomePay()", () => {
     const actualOutput = takeHomePay(input);
     expect(actualOutput).toEqual(expectedOutput);
   });
-  it("should return the correct value if the input is between 15,001 50,000", () => {
+  it("should return the correct value if the input is between 15,001 and 50,000", () => {
     const input = 20000;
     const expectedOutput = { tax: 1000, ni: 600, pay: 18400 };
+    const actualOutput = takeHomePay(input);
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+  it("should return the correct value if the input is above 50,000", () => {
+    const input = 55000;
+    const expectedOutput = { tax: 9000, ni: 4300, pay: 41700 };
     const actualOutput = takeHomePay(input);
     expect(actualOutput).toEqual(expectedOutput);
   });

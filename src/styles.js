@@ -10,3 +10,5 @@ export const HeaderStyled = styled.div`
     padding-left: 10px;
   }
 `;
+
+export const FormStyled = styled.div``;

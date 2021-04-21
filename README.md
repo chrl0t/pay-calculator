@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Pay Calculator
 
 A React App which takes a salary as an input and calculates the user's Tax, NI and Net Pay.
 

@@ -19,7 +19,7 @@ const Form = () => {
         <div>
           <form className='form' onSubmit={handleSubmit}>
             <div className='label'>
-              <label>Enter your pay:</label>
+              <label>Enter your Salary:</label>
             </div>
             <input
               type='number'

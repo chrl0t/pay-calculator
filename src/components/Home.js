@@ -1,12 +1,13 @@
 import React from "react";
 import Form from "./Form";
+import { HomeStyled } from "../styles";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <HomeStyled>
+      <h1>Pay Calculator</h1>
       <Form />
-    </div>
+    </HomeStyled>
   );
 };
 

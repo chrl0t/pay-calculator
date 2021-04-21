@@ -11,6 +11,16 @@ export const HeaderStyled = styled.div`
   }
 `;
 
+export const HomeStyled = styled.div`
+  text-align: center;
+  h1 {
+    font-family: PT Sans, Arial, Helvetica, Sans-Serif;
+    color: #6facde;
+    font-weight: 100;
+    font-size: 80px;
+  }
+`;
+
 export const FormStyled = styled.div`
   .form {
     margin: auto;

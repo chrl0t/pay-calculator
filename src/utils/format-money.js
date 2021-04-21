@@ -1,5 +1,12 @@
 const formatMoney = (number) => {
-  return "Invalid input";
+  if (typeof number !== "number") {
+    return "Invalid input";
+  } else {
+    return number.toLocaleString("en-UK", {
+      style: "currency",
+      currency: "GBP"
+    });
+  }
 };
 
 module.exports = formatMoney;

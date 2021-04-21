@@ -12,14 +12,18 @@ const FormSubmitted = ({ grossSalary }) => {
   return (
     <FormSubmittedStyled>
       <table>
-        <tr>
-          <th>Tax due</th>
-          <th>NI Due</th>
-          <th>Net Pay</th>
-        </tr>
-        <td>{tax}</td>
-        <td>{ni}</td>
-        <td>{pay}</td>
+        <tbody>
+          <tr>
+            <th>Tax due</th>
+            <th>NI Due</th>
+            <th>Net Pay</th>
+          </tr>
+          <tr>
+            <td>{tax}</td>
+            <td>{ni}</td>
+            <td>{pay}</td>
+          </tr>
+        </tbody>
       </table>
     </FormSubmittedStyled>
   );

@@ -7,4 +7,10 @@ describe("formatMoney()", () => {
     const actualOutput = formatMoney(input);
     expect(expectedOuptut).toEqual(actualOutput);
   });
+  it("should return the number passed in formatted as British currency", () => {
+    const input = 12000;
+    const expectedOutput = "£12,000";
+    const actualOutput = formatMoney(input);
+    expect(expectedOutput).toEqual(actualOutput);
+  });
 });

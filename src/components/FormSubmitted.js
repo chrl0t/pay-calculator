@@ -1,13 +1,14 @@
 import React from "react";
 import takeHomePay from "../utils/take-home-pay";
+import formatMoney from "../utils/format-money";
 import { FormSubmittedStyled } from "../styles";
 
 const FormSubmitted = ({ grossSalary }) => {
   const newGrossSalary = parseInt(grossSalary);
   const payslip = takeHomePay(newGrossSalary);
-  const tax = payslip.tax;
-  const ni = payslip.ni;
-  const pay = payslip.pay;
+  const tax = formatMoney(payslip.tax);
+  const ni = formatMoney(payslip.ni);
+  const pay = formatMoney(payslip.pay);
   return (
     <FormSubmittedStyled>
       <table>

@@ -16,15 +16,21 @@ const Form = () => {
   } else {
     return (
       <FormStyled>
-        <form onSubmit={handleSubmit}>
-          <label>Enter your pay:</label>
-          <input
-            type='number'
-            required
-            onChange={(e) => setGrossSalary(e.target.value)}
-          />
-          <input type='submit' value='Submit' />
-        </form>
+        <div>
+          <form className='form' onSubmit={handleSubmit}>
+            <div className='label'>
+              <label>Enter your pay:</label>
+            </div>
+            <input
+              type='number'
+              required
+              onChange={(e) => setGrossSalary(e.target.value)}
+              className='input'
+            />
+            <br></br>
+            <input className='button' type='submit' value='Submit' />
+          </form>
+        </div>
       </FormStyled>
     );
   }

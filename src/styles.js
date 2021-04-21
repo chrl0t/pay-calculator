@@ -57,3 +57,27 @@ export const FormStyled = styled.div`
     padding: 5px;
   }
 `;
+
+export const FormSubmittedStyled = styled.div`
+  table,
+  th,
+  td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    border-color: #6facde;
+    font-family: PT Sans, Arial, Helvetica, Sans-Serif;
+    color: #6facde;
+    font-size: 80px;
+    font-weight: 10;
+    margin: 0 auto;
+  }
+
+  table {
+    border-spacing: 5px;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+`;

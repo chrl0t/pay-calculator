@@ -1,5 +1,6 @@
 import React from "react";
 import takeHomePay from "../utils/take-home-pay";
+import { FormSubmittedStyled } from "../styles";
 
 const FormSubmitted = ({ grossSalary }) => {
   const newGrossSalary = parseInt(grossSalary);
@@ -8,12 +9,18 @@ const FormSubmitted = ({ grossSalary }) => {
   const ni = payslip.ni;
   const pay = payslip.pay;
   return (
-    <div>
-      <h1>Form submitted</h1>
-      <h1>tax: {tax}</h1>
-      <h1>ni: {ni}</h1>
-      <h1>pay: {pay}</h1>
-    </div>
+    <FormSubmittedStyled>
+      <table>
+        <tr>
+          <th>Tax due</th>
+          <th>NI Due</th>
+          <th>Net Pay</th>
+        </tr>
+        <td>{tax}</td>
+        <td>{ni}</td>
+        <td>{pay}</td>
+      </table>
+    </FormSubmittedStyled>
   );
 };
 
